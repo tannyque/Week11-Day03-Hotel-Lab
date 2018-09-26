@@ -16,4 +16,14 @@ public class CommonRoomTest {
     public void hasName() {
         assertEquals("Lomond Suite", conference1.getName());
     }
+
+    @Test
+    public void hasCapacity() {
+        assertEquals(20, conference1.getCapacity());
+    }
+
+    @Test
+    public void hasRate() {
+        assertEquals(100.00, conference1.getRate(), 0.01);
+    }
 }

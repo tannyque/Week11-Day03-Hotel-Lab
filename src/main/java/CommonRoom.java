@@ -13,4 +13,12 @@ public class CommonRoom {
     public String getName() {
         return name;
     }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public double getRate() {
+        return rate;
+    }
 }
