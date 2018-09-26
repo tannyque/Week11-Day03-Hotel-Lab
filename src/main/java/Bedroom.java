@@ -46,4 +46,8 @@ public class Bedroom {
     public boolean isFull() {
         return guestCount() == this.capacity;
     }
+
+    public Guest removeGuest() {
+        return this.guests.remove(0);
+    }
 }
