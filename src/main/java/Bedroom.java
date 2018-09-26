@@ -10,6 +10,7 @@ public class Bedroom {
     private ArrayList<Guest> guests;
     private int capacity;
 
+
     public Bedroom(int number, String type, double rate, int capacity) {
         this.number = number;
         this.type = type;

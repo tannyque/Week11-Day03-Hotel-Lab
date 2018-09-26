@@ -7,8 +7,10 @@ public class HotelTest {
 
     Hotel hotel;
     Bedroom bedroom1;
+    Bedroom bedroom2;
     Guest guest1;
     Guest guest2;
+    Guest guest3;
     CommonRoom diningRoom;
 
 
@@ -16,8 +18,10 @@ public class HotelTest {
     public void setUp() {
         hotel = new Hotel("Bates Motel");
         bedroom1 = new Bedroom(1, "Double", 120.00, 2);
+        bedroom2 = new Bedroom(2, "Single", 96.23, 1);
         guest1 = new Guest("Jack Torrance");
-        guest2 = new Guest("Loki");
+        guest2 = new Guest("Tim Cook");
+        guest3 = new Guest("Loki");
         diningRoom = new CommonRoom("Millennium Scran", 20, 0.0);
     }
 
@@ -90,6 +94,15 @@ public class HotelTest {
 
     }
 
+    @Test
+    public void hotelCanGetListOfVacantRooms() {
+        hotel.addGuest(guest1);
+        hotel.addGuest(guest2);
+        hotel.addBedroom(bedroom1);
+        hotel.addBedroom(bedroom2);
+        hotel.assignGuestToRoom(bedroom1, guest1);
+        hotel.assignGuestToRoom(bedroom1, guest2);
+        assertEquals(1, hotel.getVacantBedrooms().size());
 
-
+    }
 }
