@@ -72,4 +72,11 @@ public class BedroomTest {
         bedroom1.removeGuest();
         assertEquals(1, bedroom1.guestCount());
     }
+
+    @Test
+    public void returnsGuestList() {
+        bedroom1.addGuest(guest1);
+        bedroom1.addGuest(guest3);
+        assertEquals(2, bedroom1.getGuestList().size());
+    }
 }

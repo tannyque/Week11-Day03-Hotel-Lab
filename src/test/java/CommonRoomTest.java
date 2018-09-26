@@ -70,4 +70,11 @@ public class CommonRoomTest {
         assertEquals(1, conference1.guestCount());
     }
 
+    @Test
+    public void returnsGuestList() {
+        conference1.addGuest(guest1);
+        conference1.addGuest(guest3);
+        assertEquals(2, conference1.getGuestList().size());
+    }
+
 }

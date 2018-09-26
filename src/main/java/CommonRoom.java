@@ -44,4 +44,8 @@ public class CommonRoom {
     public Guest removeGuest() {
         return this.guests.remove(0);
     }
+
+    public ArrayList<Guest> getGuestList() {
+        return new ArrayList<>(guests);
+    }
 }

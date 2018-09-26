@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.BitSet;
 
 public class Bedroom {
 
@@ -49,5 +50,9 @@ public class Bedroom {
 
     public Guest removeGuest() {
         return this.guests.remove(0);
+    }
+
+    public ArrayList<Guest> getGuestList() {
+        return new ArrayList<>(guests);
     }
 }
