@@ -16,4 +16,9 @@ public class HotelTest {
     public void hasName() {
         assertEquals("Bates Motel", hotel.getName());
     }
+
+    @Test
+    public void hasZeroBedrooms() {
+        assertEquals(0, hotel.getBedroomCount());
+    }
 }
