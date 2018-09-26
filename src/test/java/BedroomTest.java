@@ -69,8 +69,9 @@ public class BedroomTest {
     public void removesGuest() {
         bedroom1.addGuest(guest3);
         bedroom1.addGuest(guest2);
-        bedroom1.removeGuest();
+        assertEquals(true, bedroom1.removeGuest(guest3));
         assertEquals(1, bedroom1.guestCount());
+
     }
 
     @Test

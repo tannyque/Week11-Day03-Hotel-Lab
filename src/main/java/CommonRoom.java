@@ -41,8 +41,8 @@ public class CommonRoom {
         return guestCount() == this.capacity;
     }
 
-    public Guest removeGuest() {
-        return this.guests.remove(0);
+    public boolean removeGuest(Guest guestToRemove) {
+        return this.guests.remove(guestToRemove);
     }
 
     public ArrayList<Guest> getGuestList() {

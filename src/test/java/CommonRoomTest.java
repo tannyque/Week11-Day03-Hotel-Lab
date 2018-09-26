@@ -66,8 +66,7 @@ public class CommonRoomTest {
     public void removesGuest() {
         conference1.addGuest(guest3);
         conference1.addGuest(guest2);
-        conference1.removeGuest();
-        assertEquals(1, conference1.guestCount());
+        assertEquals(true, conference1.removeGuest(guest3));
     }
 
     @Test
